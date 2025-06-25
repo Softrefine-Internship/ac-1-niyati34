@@ -1,0 +1,58 @@
+.sidebar {
+  width: 80px;
+  background: $color-white;
+  padding: $sp-md;
+  box-shadow: $shadow;
+
+  .sidebar-header {
+    .logo {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    .search-container {
+      display: flex;
+      align-items: center;
+      margin-top: $sp-md;
+
+      .search-icon {
+        margin-right: 4px;
+        color: $color-grey;
+      }
+
+      .search-input {
+        border: none;
+        background: transparent;
+        outline: none;
+      }
+    }
+  }
+
+  .nav-list {
+    list-style: none;
+    margin-top: $sp-lg;
+
+    .nav-item {
+      margin-bottom: $sp-sm;
+
+      .nav-link {
+        display: flex;
+        justify-content: center;
+        font-size: 2.2rem;
+
+        & ion-icon {
+          color: $color-grey;
+          box-sizing: border-box;
+
+          &:hover,
+          &.active {
+            color: $color-white;
+            background-color: $color-black;
+            padding: 0.5em;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,4 +1,9 @@
-@import "base/_base";
+@import "abstracts/variables";
 
-@import "components/navbar";
+@import "base/base";
+
+@import "layout/header";
+
+@import "components/card";
 @import "components/dashboard";
+@import "components/navbar";
