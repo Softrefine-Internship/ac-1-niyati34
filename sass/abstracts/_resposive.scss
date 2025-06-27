@@ -1,0 +1,19 @@
+@media (max-width: 768px) {
+  .dashboard-content {
+    flex-direction: column;
+  }
+
+  .projects-section {
+    margin-right: 0;
+    margin-bottom: $sp-lg;
+  }
+
+  .project-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-stats {
+    flex-wrap: wrap;
+    gap: $sp-md;
+  }
+}
