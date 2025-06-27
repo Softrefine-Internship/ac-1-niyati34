@@ -1,58 +1,72 @@
 .sidebar {
   width: 80px;
-  background: $color-white;
   padding: $sp-md;
-  box-shadow: $shadow;
+  position: fixed;
+  height: 100vh;
+  z-index: 100;
+}
 
-  .sidebar-header {
-    .logo {
-      font-size: 1.2rem;
-      font-weight: 600;
-    }
-
-    .search-container {
-      display: flex;
-      align-items: center;
-      margin-top: $sp-md;
-
-      .search-icon {
-        margin-right: 4px;
-        color: $color-grey;
-      }
-
-      .search-input {
-        border: none;
-        background: transparent;
-        outline: none;
-      }
-    }
+.sidebar-header {
+  .menu-toggle {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: $color-grey;
+    margin-bottom: $sp-md;
+    cursor: pointer;
   }
 
-  .nav-list {
-    list-style: none;
-    margin-top: $sp-lg;
+  .logo {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: $sp-md;
+  }
 
-    .nav-item {
-      margin-bottom: $sp-sm;
+  .search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: $sp-lg;
+  }
 
-      .nav-link {
-        display: flex;
-        justify-content: center;
-        font-size: 2.2rem;
+  .search-icon {
+    color: $color-grey;
+    font-size: 1.6rem;
+  }
 
-        & ion-icon {
-          color: $color-grey;
-          box-sizing: border-box;
+  .search-input {
+    display: none;
+  }
+}
 
-          &:hover,
-          &.active {
-            color: $color-white;
-            background-color: $color-black;
-            padding: 0.5em;
-            border-radius: 50%;
-          }
-        }
-      }
-    }
+.nav-list {
+  list-style: none;
+}
+
+.nav-item {
+  margin-bottom: $sp-md;
+
+  &.active .nav-link {
+    color: $color-white;
+    background-color: $color-black;
+  }
+}
+
+.nav-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 2.2rem;
+  color: $color-grey;
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: $color-white;
+    background-color: $color-black;
   }
 }

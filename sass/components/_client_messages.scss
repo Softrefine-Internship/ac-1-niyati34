@@ -1,0 +1,97 @@
+.messages-section {
+  flex: 1;
+  padding: $sp-lg;
+  padding-left: 0;
+  padding-right: 0;
+  background: #f8f9fa;
+  margin-left: 0;
+}
+.messages-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $sp-lg;
+}
+
+.messages-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-left: $sp-lg;
+}
+
+.messages-actions {
+  display: flex;
+  gap: $sp-sm;
+
+  button {
+    background: none;
+    border: none;
+    color: $color-grey;
+    cursor: pointer;
+    margin-right: $sp-lg;
+    font-size: 1.6rem;
+  }
+}
+
+.message-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: $sp-md;
+  padding-bottom: $sp-md;
+  padding-left: $sp-lg;
+  border-bottom: 1px solid $color-border;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.message-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: $sp-md;
+}
+
+.message-content {
+  flex: 1;
+  position: relative;
+  margin-right: $sp-lg;
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.message-name {
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.message-text {
+  color: $color-grey;
+  font-size: 1.3rem;
+  line-height: 1.4;
+  margin-bottom: 10px; /* Add space for the timestamp */
+  padding-right: 30px; /* Prevent text from overlapping with timestamp */
+}
+
+.message-time {
+  color: $color-grey;
+  font-size: 1.2rem;
+  position: absolute; /* Position absolutely within message-content */
+  bottom: 0;
+  right: 0;
+}
+
+.message-star {
+  color: $color-dark;
+  cursor: pointer;
+
+  &.starred {
+    color: $color-dark;
+  }
+}

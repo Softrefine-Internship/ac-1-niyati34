@@ -1,0 +1,154 @@
+.project-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
+}
+
+.project-card {
+  background: $color-white;
+  border-radius: $radius;
+  padding: $sp-md;
+  min-height: 200px;
+  box-shadow: $shadow;
+  position: relative;
+  font-family: $font-primary;
+
+  &.card-white {
+    background: $color-white;
+
+    .progress-fill {
+      background: $color-blue;
+    }
+  }
+
+  &.card-orange {
+    background: #fff4e6;
+
+    .progress-fill {
+      background: $color-orange;
+    }
+  }
+
+  &.card-green {
+    background: #e8f8f5;
+
+    .progress-fill {
+      background: $color-green;
+    }
+  }
+
+  &.card-pink {
+    background: #fef0f5;
+
+    .progress-fill {
+      background: $color-pink;
+    }
+  }
+
+  &.card-light {
+    background: #f8f9fa;
+    border: 2px dashed $color-border;
+  }
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $sp-md;
+}
+
+.card-date {
+  color: $color-grey;
+  font-size: 1.2rem;
+}
+
+.card-menu {
+  background: none;
+  border: none;
+  color: $color-grey;
+  cursor: pointer;
+}
+
+.card-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.card-subtitle {
+  color: $color-grey;
+  font-size: 1.2rem;
+  margin-bottom: $sp-md;
+}
+
+.card-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $sp-sm;
+}
+
+.status-label {
+  color: $color-grey;
+  font-size: 1.2rem;
+}
+
+.status-percentage {
+  font-weight: 600;
+  font-size: 1.4rem;
+  position: absolute;
+  right: $sp-md;
+  bottom: 60px;
+}
+
+.progress-bar {
+  background: #f0f0f0;
+  height: 6px;
+  border-radius: 3px;
+  margin-bottom: $sp-md;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.team-avatars {
+  display: flex;
+  align-items: center;
+}
+
+.team-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: -8px;
+  border: 2px solid $color-white;
+}
+
+.avatar-count {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: $color-grey;
+  color: $color-white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  margin-left: 4px;
+}
+
+.days-left {
+  color: $color-grey;
+  font-size: 1.2rem;
+}

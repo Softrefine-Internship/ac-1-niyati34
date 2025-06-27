@@ -1,9 +1,13 @@
+// main.scss - Main entry point
 @import "abstracts/variables";
+@import "abstracts/resposive";
 
 @import "base/base";
 
-@import "layout/header";
-
-@import "components/card";
-@import "components/dashboard";
 @import "components/navbar";
+@import "layout/header";
+@import "components/dashboard";
+@import "components/project";
+@import "components/card";
+@import "components/client_messages";
+@import "components/main_content";
