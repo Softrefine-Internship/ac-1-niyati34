@@ -1,19 +1,31 @@
 .sidebar {
   width: 80px;
-  padding: $sp-md;
+  padding: 1.5rem;
   position: fixed;
   height: 100vh;
   z-index: 100;
 }
 
 .sidebar-header {
-  .menu-toggle {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: $sp-sm;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin-bottom: 6rem;
+
+  .menu-toggle.custom-icon {
     background: none;
     border: none;
-    font-size: 1.8rem;
-    color: $color-grey;
-    margin-bottom: $sp-md;
     cursor: pointer;
+    padding: 0;
+    svg {
+      width: 28px;
+      height: 28px;
+
+      display: block;
+    }
   }
 
   .logo {
@@ -69,4 +81,9 @@
     color: $color-white;
     background-color: $color-black;
   }
+}
+.custom-icon svg {
+  display: block;
+  margin: auto;
+  color: #333;
 }

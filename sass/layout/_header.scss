@@ -61,3 +61,124 @@
   font-weight: 500;
   font-size: 1.4rem;
 }
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3rem;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 6rem;
+
+  h1 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: #222;
+  }
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 30px;
+  padding: 1rem 1.9rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  width: 250px;
+
+  ion-icon {
+    font-size: 1.6rem;
+    color: #888;
+  }
+
+  input {
+    border: none;
+    background: transparent;
+    outline: none;
+    margin-left: 8px;
+    font-size: 1.4rem;
+    color: #333;
+    width: 100%;
+  }
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  cursor: pointer;
+
+  .add-btn {
+    width: 32px;
+    height: 32px;
+    background: #000;
+    color: white;
+    border-radius: 50%;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+  }
+
+  .vertical-line {
+    height: 24px;
+    width: 1px;
+    background-color: #ccc;
+  }
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+
+    .user-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .user-name {
+      font-weight: 500;
+      font-size: 1.4rem;
+      color: #333;
+    }
+  }
+}
+
+.notification-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .notification-btn {
+    position: relative;
+    background: none;
+    border: none;
+    font-size: 2.2rem;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+
+  .notification-dot {
+    position: absolute;
+    top: 3px;
+    right: 18px;
+    width: 5px;
+    height: 5px;
+    background: red;
+    border-radius: 50%;
+    z-index: 0;
+  }
+}

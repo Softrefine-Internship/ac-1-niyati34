@@ -17,3 +17,78 @@
     gap: $sp-md;
   }
 }
+
+@media (max-width: 480px) {
+  .user-profile {
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: center;
+  }
+
+  .user-info .user-name {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.6rem;
+    .left-section {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+      width: 100%;
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      .search-bar {
+        width: 100%;
+      }
+    }
+
+    .user-profile {
+      width: 100%;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+
+      .add-btn {
+        width: 28px;
+        height: 28px;
+        font-size: 1.4rem;
+      }
+
+      .user-info .user-name {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .notification-wrapper {
+    .notification-btn {
+      font-size: 2rem;
+    }
+
+    .notification-dot {
+      top: -3px;
+      right: -1px;
+      width: 8px;
+      height: 8px;
+    }
+  }
+}
+.project-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
