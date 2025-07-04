@@ -15,7 +15,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: $sp-lg;
+    margin-bottom: $sp-md;
   }
 
   .section-bottom {
@@ -25,10 +25,17 @@
 
     .project-stats {
       display: flex;
-      gap: 2rem;
+      gap: 4rem;
       align-items: center;
     }
-
+    .dot-separator {
+      width: 0.8rem;
+      height: 0.8rem;
+      border: 0.15rem solid #555555;
+      border-radius: 50%;
+      align-self: flex-end;
+      margin-bottom: 0.4rem;
+    }
     .section-icons {
       display: flex;
       gap: 1.2rem;
@@ -49,7 +56,7 @@
 }
 
 .section-date {
-  color: $color-grey;
+  color: $color-dark;
   font-size: 1.4rem;
   margin-bottom: $sp-sm;
   display: inline-block;
@@ -93,14 +100,4 @@
       margin-right: 0.8rem;
     }
   }
-}
-.dot-separator {
-  width: 0.6rem;
-  height: 0.6rem;
-  border: 0.15 rem solid #999;
-  border-radius: 50%;
-  margin: 0 1.6rem;
-
-  align-self: flex-end;
-  margin-bottom: 0.4rem;
 }
