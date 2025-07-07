@@ -19,6 +19,77 @@
 }
 
 @media (max-width: 480px) {
+  .main-header {
+    padding: 1.6rem;
+    .top-header-row {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .left-section {
+      width: 60% !important;
+    }
+
+    .left-section h1 {
+      font-size: 1.8rem !important;
+    }
+
+    .search-bar {
+      width: 100%;
+    }
+    .user-avatar {
+      width: 3rem !important;
+      height: 3rem !important;
+    }
+    .user-profile {
+      width: 70%;
+
+      .add-btn {
+        width: 2.4rem !important;
+        height: 2.4rem !important;
+        font-size: 1.4rem !important;
+      }
+
+      .user-info .user-name {
+        font-size: 1.2rem !important;
+      }
+
+      .notification-wrapper .notification-btn {
+        font-size: 2.4rem !important;
+      }
+
+      .notification-dot {
+        top: -3px;
+        right: 4px !important;
+        width: 8px;
+        height: 8px;
+      }
+    }
+  }
+
+  .projects-section {
+    margin-right: 2.3rem;
+    margin-left: 2.3rem !important;
+  }
+  .section-title {
+    font-size: 2rem !important;
+  }
+  .section-date {
+    font-size: 1.2rem !important;
+  }
+  .project-stats {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important ;
+
+    .stat-item {
+      .stat-number {
+        font-size: 1.7rem !important;
+      }
+      .stat-label {
+        font-size: 1rem !important;
+      }
+    }
+  }
   .user-profile {
     flex-wrap: wrap;
     gap: 0.8rem;
@@ -28,9 +99,48 @@
   .user-info .user-name {
     font-size: 1.2rem;
   }
+  .sidebar-nav {
+    margin-left: 0.5rem !important;
+  }
 }
 
 @media (max-width: 768px) {
+  .search-bar {
+    display: flex !important;
+  }
+
+  .search-bar-main {
+    display: none !important;
+  }
+  .dashboard-content {
+    flex-direction: column;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    height: 100vh !important;
+  }
+
+  .projects-section,
+  .messages-section {
+    overflow: visible !important;
+    height: auto !important;
+    flex: unset !important;
+  }
+  .projects-section {
+    padding: 3.5rem !important;
+    margin-left: 3.6rem;
+  }
+  .project-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.8rem !important;
+    .stat-item {
+      .stat-number {
+        font-size: 1.6rem !important;
+      }
+      .stat-label {
+        font-size: 1rem !important;
+      }
+    }
+  }
   .dashboard-content {
     flex-direction: column;
     height: auto;
@@ -40,27 +150,30 @@
     align-items: flex-start;
     gap: 1rem;
     padding: 1.6rem;
+
     .left-section {
       flex-direction: column;
       align-items: flex-start;
       gap: 1rem;
       width: 100%;
-      order: 2;
+
       h1 {
         font-size: 1.8rem;
+        order: 1;
       }
 
       .search-bar {
         width: 100%;
+        order: 2;
       }
     }
 
     .user-profile {
       width: 100%;
-      justify-content: flex-end;
-      gap: 1rem;
-      order: 1;
+      justify-content: space-between;
+      order: 0;
       flex-wrap: wrap;
+      gap: 1rem;
 
       .add-btn {
         width: 28px;
@@ -98,8 +211,8 @@
   }
 }
 @media (max-width: 626px) {
-  .projects-section {
-    margin-left: $sp-lg;
+  .search-bar-main {
+    display: none;
   }
   .sidebar {
     position: fixed !important;
@@ -165,7 +278,7 @@
 
   .main-content {
     margin-left: 0 !important;
-    padding-bottom: 60px;
+    padding-bottom: 0px;
   }
 
   body {
@@ -173,56 +286,7 @@
     padding-bottom: 60px;
   }
 }
-.project-stats {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-  margin-bottom: 2rem;
 
-  @media (max-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.8rem;
-  }
-
-  @media (max-width: 480px) {
-    grid-template-columns: 1fr;
-    gap: 0.2rem;
-  }
-
-  .stat-item {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-    .stat-number {
-      font-size: 2rem;
-      font-weight: 600;
-      color: $color-dark;
-
-      @media (max-width: 768px) {
-        font-size: 1.6rem;
-      }
-
-      @media (max-width: 480px) {
-        font-size: 1.4rem;
-      }
-    }
-
-    .stat-label {
-      font-size: 1.2rem;
-      color: $color-grey;
-      margin-top: 0.2rem;
-
-      @media (max-width: 768px) {
-        font-size: 1rem;
-      }
-
-      @media (max-width: 480px) {
-        font-size: 0.9rem;
-      }
-    }
-  }
-}
 .dot-separator {
   width: 6px;
   height: 6px;
@@ -231,12 +295,58 @@
   align-self: center;
 
   @media (max-width: 768px) {
-    width: 4px;
-    height: 4px;
+    width: 4px !important;
+    height: 4px !important;
     margin: 0;
   }
 
   @media (max-width: 480px) {
     display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .main-header {
+    padding: 1.6rem;
+    .top-header-row {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .left-section h1 {
+      font-size: 1.8rem;
+      width: 60%;
+    }
+
+    .search-bar {
+      width: 100%;
+    }
+
+    .user-profile {
+      gap: 0.5rem !important;
+      width: 70%;
+
+      .add-btn {
+        width: 28px;
+        height: 28px;
+        font-size: 1.4rem;
+      }
+
+      .user-info .user-name {
+        font-size: 1.2rem;
+      }
+
+      .notification-wrapper .notification-btn {
+        font-size: 3rem;
+      }
+
+      .notification-dot {
+        top: -3px;
+        right: -1px;
+        width: 8px;
+        height: 8px;
+      }
+    }
   }
 }

@@ -15,6 +15,67 @@
   }
 }
 @media (max-width: 480px) {
+  .main-header {
+    padding: 1.6rem;
+  }
+  .main-header .top-header-row {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .main-header .left-section {
+    width: 60% !important;
+  }
+  .main-header .left-section h1 {
+    font-size: 1.8rem !important;
+  }
+  .main-header .search-bar {
+    width: 100%;
+  }
+  .main-header .user-avatar {
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+  .main-header .user-profile {
+    width: 70%;
+  }
+  .main-header .user-profile .add-btn {
+    width: 2.4rem !important;
+    height: 2.4rem !important;
+    font-size: 1.4rem !important;
+  }
+  .main-header .user-profile .user-info .user-name {
+    font-size: 1.2rem !important;
+  }
+  .main-header .user-profile .notification-wrapper .notification-btn {
+    font-size: 2.4rem !important;
+  }
+  .main-header .user-profile .notification-dot {
+    top: -3px;
+    right: 4px !important;
+    width: 8px;
+    height: 8px;
+  }
+  .projects-section {
+    margin-right: 2.3rem;
+    margin-left: 2.3rem !important;
+  }
+  .section-title {
+    font-size: 2rem !important;
+  }
+  .section-date {
+    font-size: 1.2rem !important;
+  }
+  .project-stats {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+  .project-stats .stat-item .stat-number {
+    font-size: 1.7rem !important;
+  }
+  .project-stats .stat-item .stat-label {
+    font-size: 1rem !important;
+  }
   .user-profile {
     flex-wrap: wrap;
     gap: 0.8rem;
@@ -23,8 +84,43 @@
   .user-info .user-name {
     font-size: 1.2rem;
   }
+  .sidebar-nav {
+    margin-left: 0.5rem !important;
+  }
 }
 @media (max-width: 768px) {
+  .search-bar {
+    display: flex !important;
+  }
+  .search-bar-main {
+    display: none !important;
+  }
+  .dashboard-content {
+    flex-direction: column;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    height: 100vh !important;
+  }
+  .projects-section,
+  .messages-section {
+    overflow: visible !important;
+    height: auto !important;
+    flex: unset !important;
+  }
+  .projects-section {
+    padding: 3.5rem !important;
+    margin-left: 3.6rem;
+  }
+  .project-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.8rem !important;
+  }
+  .project-stats .stat-item .stat-number {
+    font-size: 1.6rem !important;
+  }
+  .project-stats .stat-item .stat-label {
+    font-size: 1rem !important;
+  }
   .dashboard-content {
     flex-direction: column;
     height: auto;
@@ -40,20 +136,21 @@
     align-items: flex-start;
     gap: 1rem;
     width: 100%;
-    order: 2;
   }
   .main-header .left-section h1 {
     font-size: 1.8rem;
+    order: 1;
   }
   .main-header .left-section .search-bar {
     width: 100%;
+    order: 2;
   }
   .main-header .user-profile {
     width: 100%;
-    justify-content: flex-end;
-    gap: 1rem;
-    order: 1;
+    justify-content: space-between;
+    order: 0;
     flex-wrap: wrap;
+    gap: 1rem;
   }
   .main-header .user-profile .add-btn {
     width: 28px;
@@ -86,8 +183,8 @@
 }
 
 @media (max-width: 626px) {
-  .projects-section {
-    margin-left: 3.6rem;
+  .search-bar-main {
+    display: none;
   }
   .sidebar {
     position: fixed !important;
@@ -146,67 +243,13 @@
   }
   .main-content {
     margin-left: 0 !important;
-    padding-bottom: 60px;
+    padding-bottom: 0px;
   }
   body {
     overflow-x: hidden;
     padding-bottom: 60px;
   }
 }
-.project-stats {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-  margin-bottom: 2rem;
-}
-@media (max-width: 768px) {
-  .project-stats {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.8rem;
-  }
-}
-@media (max-width: 480px) {
-  .project-stats {
-    grid-template-columns: 1fr;
-    gap: 0.2rem;
-  }
-}
-.project-stats .stat-item {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.project-stats .stat-item .stat-number {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #2f2f2f;
-}
-@media (max-width: 768px) {
-  .project-stats .stat-item .stat-number {
-    font-size: 1.6rem;
-  }
-}
-@media (max-width: 480px) {
-  .project-stats .stat-item .stat-number {
-    font-size: 1.4rem;
-  }
-}
-.project-stats .stat-item .stat-label {
-  font-size: 1.2rem;
-  color: #565656;
-  margin-top: 0.2rem;
-}
-@media (max-width: 768px) {
-  .project-stats .stat-item .stat-label {
-    font-size: 1rem;
-  }
-}
-@media (max-width: 480px) {
-  .project-stats .stat-item .stat-label {
-    font-size: 0.9rem;
-  }
-}
-
 .dot-separator {
   width: 6px;
   height: 6px;
@@ -216,8 +259,8 @@
 }
 @media (max-width: 768px) {
   .dot-separator {
-    width: 4px;
-    height: 4px;
+    width: 4px !important;
+    height: 4px !important;
     margin: 0;
   }
 }
@@ -227,6 +270,44 @@
   }
 }
 
+@media (max-width: 700px) {
+  .main-header {
+    padding: 1.6rem;
+  }
+  .main-header .top-header-row {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .main-header .left-section h1 {
+    font-size: 1.8rem;
+    width: 60%;
+  }
+  .main-header .search-bar {
+    width: 100%;
+  }
+  .main-header .user-profile {
+    gap: 0.5rem !important;
+    width: 70%;
+  }
+  .main-header .user-profile .add-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 1.4rem;
+  }
+  .main-header .user-profile .user-info .user-name {
+    font-size: 1.2rem;
+  }
+  .main-header .user-profile .notification-wrapper .notification-btn {
+    font-size: 3rem;
+  }
+  .main-header .user-profile .notification-dot {
+    top: -3px;
+    right: -1px;
+    width: 8px;
+    height: 8px;
+  }
+}
 *,
 *::after,
 *::before {
@@ -333,100 +414,43 @@ body {
 
 .main-header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.6rem 3.6rem;
-  position: sticky;
-  top: 0;
-  z-index: 50;
-}
-.main-header h1 {
-  font-size: 2.4rem;
-  font-weight: 600;
-}
-
-.user-profile {
-  display: flex;
-  align-items: center;
-}
-
-.search-bar {
-  display: flex;
-  align-items: center;
-  background: #fff;
-  border-radius: 25px;
-  padding: 8px 16px;
-  margin-right: 3.6rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-}
-.search-bar input {
-  border: none;
-  background: transparent;
-  outline: none;
-  margin-left: 8px;
-  font-size: 1.4rem;
-}
-
-.notification-btn {
-  background: none;
-  border: none;
-  color: #565656;
-  margin-right: 1.6rem;
-  cursor: pointer;
-}
-
-.user-info {
-  display: flex;
-  align-items: center;
-}
-
-.user-avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin-right: 0.8rem;
-}
-
-.user-name {
-  font-weight: 600;
-  font-size: 1.4rem;
-}
-
-.main-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   padding: 2rem 3rem;
+  gap: 1rem;
   position: sticky;
   top: 0;
   z-index: 50;
+  background: rgb(242, 246, 254);
 }
-
-.left-section {
+.main-header .top-header-row {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 6rem;
+  width: 100%;
 }
-.left-section h1 {
+.main-header .left-section {
+  display: flex;
+  gap: 3.6rem;
+}
+.main-header .left-section h1 {
   font-size: 2.4rem;
   font-weight: 600;
   color: #222;
 }
-
-.search-bar {
-  display: flex;
+.main-header .search-bar {
+  display: none;
   align-items: center;
   background: white;
   border-radius: 30px;
   padding: 1rem 1.9rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  width: 250px;
+  width: 100%;
 }
-.search-bar ion-icon {
+.main-header .search-bar ion-icon {
   font-size: 1.6rem;
   color: #888;
 }
-.search-bar input {
+.main-header .search-bar input {
   border: none;
   background: transparent;
   outline: none;
@@ -435,14 +459,35 @@ body {
   color: #333;
   width: 100%;
 }
-
-.user-profile {
+.main-header .search-bar-main {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 30px;
+  padding: 1rem 1.9rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  width: 100%;
+}
+.main-header .search-bar-main ion-icon {
+  font-size: 1.6rem;
+  color: #888;
+}
+.main-header .search-bar-main input {
+  border: none;
+  background: transparent;
+  outline: none;
+  margin-left: 8px;
+  font-size: 1.4rem;
+  color: #333;
+  width: 100%;
+}
+.main-header .user-profile {
   display: flex;
   align-items: center;
   gap: 1.2rem;
   cursor: pointer;
 }
-.user-profile .add-btn {
+.main-header .user-profile .add-btn {
   width: 32px;
   height: 32px;
   background: #000;
@@ -455,34 +500,33 @@ body {
   cursor: pointer;
   border: none;
 }
-.user-profile .vertical-line {
+.main-header .user-profile .vertical-line {
   height: 24px;
   width: 1px;
   background-color: #ccc;
 }
-.user-profile .user-info {
+.main-header .user-profile .user-info {
   display: flex;
   align-items: center;
   gap: 0.8rem;
 }
-.user-profile .user-info .user-avatar {
+.main-header .user-profile .user-info .user-avatar {
   width: 40px;
   height: 40px;
   border-radius: 50%;
 }
-.user-profile .user-info .user-name {
+.main-header .user-profile .user-info .user-name {
   font-weight: 500;
   font-size: 1.4rem;
   color: #333;
 }
-
-.notification-wrapper {
+.main-header .notification-wrapper {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.notification-wrapper .notification-btn {
+.main-header .notification-wrapper .notification-btn {
   position: relative;
   background: none;
   border: none;
@@ -494,10 +538,10 @@ body {
   justify-content: center;
   z-index: 1;
 }
-.notification-wrapper .notification-dot {
+.main-header .notification-wrapper .notification-dot {
   position: absolute;
   top: 5px;
-  right: 20px;
+  right: 5px;
   width: 5px;
   height: 5px;
   background: red;
@@ -529,9 +573,23 @@ body {
   overflow: hidden;
 }
 
-.dashboard-content {
+.dashboard-container {
   display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.dashboard-content {
   flex: 1;
+  display: flex;
+  overflow: hidden;
+  padding: 0;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
 }
 
@@ -540,14 +598,8 @@ body {
   flex: 1;
   overflow-y: auto;
   overflow-x: hidden;
-  padding-right: 1rem;
-  padding-left: 1rem;
-  padding-bottom: 2rem;
+  padding: 0 1rem 2rem;
   height: 100%;
-}
-
-.projects-section,
-.messages-section {
   scroll-behavior: smooth;
   scrollbar-width: none;
 }
@@ -618,16 +670,16 @@ body {
 .section-date {
   color: #2f2f2f;
   font-size: 1.4rem;
-  margin-bottom: 0.8rem;
   display: inline-block;
 }
 
 /* Project Stats */
 .project-stats {
-  display: flex;
   gap: 2rem;
   align-items: center;
   margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 .project-stats .stat-item {
   display: flex;

@@ -1,181 +1,152 @@
 .main-header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: $sp-md $sp-lg;
-  position: sticky;
-  top: 0;
-  z-index: 50;
-
-  h1 {
-    font-size: 2.4rem;
-    font-weight: 600;
-  }
-}
-
-.user-profile {
-  display: flex;
-  align-items: center;
-}
-
-.search-bar {
-  display: flex;
-  align-items: center;
-  background: $color-white;
-  border-radius: 25px;
-  padding: 8px 16px;
-  margin-right: $sp-lg;
-  box-shadow: $shadow;
-
-  input {
-    border: none;
-    background: transparent;
-    outline: none;
-    margin-left: 8px;
-    font-size: 1.4rem;
-  }
-}
-.notification-btn {
-  background: none;
-  border: none;
-  color: $color-grey;
-  margin-right: $sp-md;
-  cursor: pointer;
-}
-.user-info {
-  display: flex;
-  align-items: center;
-}
-
-.user-avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  margin-right: $sp-sm;
-}
-
-.user-name {
-  font-weight: 600;
-  font-size: 1.4rem;
-}
-.main-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   padding: 2rem 3rem;
+  gap: 1rem;
   position: sticky;
   top: 0;
   z-index: 50;
-}
+  background: $color-light-bg;
 
-.left-section {
-  display: flex;
-  align-items: center;
-  gap: 6rem;
-
-  h1 {
+  .top-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .left-section {
+    display: flex;
+    gap: 3.6rem;
+  }
+  .left-section h1 {
     font-size: 2.4rem;
     font-weight: 600;
     color: #222;
   }
-}
 
-.search-bar {
-  display: flex;
-  align-items: center;
-  background: white;
-  border-radius: 30px;
-  padding: 1rem 1.9rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  width: 250px;
-
-  ion-icon {
-    font-size: 1.6rem;
-    color: #888;
-  }
-
-  input {
-    border: none;
-    background: transparent;
-    outline: none;
-    margin-left: 8px;
-    font-size: 1.4rem;
-    color: #333;
+  .search-bar {
+    display: none;
+    align-items: center;
+    background: white;
+    border-radius: 30px;
+    padding: 1rem 1.9rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     width: 100%;
-  }
-}
 
-.user-profile {
-  display: flex;
-  align-items: center;
-  gap: 1.2rem;
-  cursor: pointer;
-
-  .add-btn {
-    width: 32px;
-    height: 32px;
-    background: #000;
-    color: white;
-    border-radius: 50%;
-    font-size: 1.6rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    border: none;
-  }
-
-  .vertical-line {
-    height: 24px;
-    width: 1px;
-    background-color: #ccc;
-  }
-  .user-info {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-
-    .user-avatar {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
+    ion-icon {
+      font-size: 1.6rem;
+      color: #888;
     }
 
-    .user-name {
-      font-weight: 500;
+    input {
+      border: none;
+      background: transparent;
+      outline: none;
+      margin-left: 8px;
       font-size: 1.4rem;
       color: #333;
+      width: 100%;
     }
   }
-}
 
-.notification-wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  .search-bar-main {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 30px;
+    padding: 1rem 1.9rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    width: 100%;
 
-  .notification-btn {
-    position: relative;
-    background: none;
-    border: none;
-    font-size: 2.9rem;
-    color: #333;
+    ion-icon {
+      font-size: 1.6rem;
+      color: #888;
+    }
+
+    input {
+      border: none;
+      background: transparent;
+      outline: none;
+      margin-left: 8px;
+      font-size: 1.4rem;
+      color: #333;
+      width: 100%;
+    }
+  }
+
+  .user-profile {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
     cursor: pointer;
+
+    .add-btn {
+      width: 32px;
+      height: 32px;
+      background: #000;
+      color: white;
+      border-radius: 50%;
+      font-size: 1.6rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border: none;
+    }
+
+    .vertical-line {
+      height: 24px;
+      width: 1px;
+      background-color: #ccc;
+    }
+
+    .user-info {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+
+      .user-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+
+      .user-name {
+        font-weight: 500;
+        font-size: 1.4rem;
+        color: #333;
+      }
+    }
+  }
+
+  .notification-wrapper {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1;
-  }
 
-  .notification-dot {
-    position: absolute;
-    top: 5px;
-    right: 20px;
-    width: 5px;
-    height: 5px;
-    background: red;
-    border-radius: 50%;
-    z-index: 0;
+    .notification-btn {
+      position: relative;
+      background: none;
+      border: none;
+      font-size: 2.9rem;
+      color: #333;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+    }
+
+    .notification-dot {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      width: 5px;
+      height: 5px;
+      background: red;
+      border-radius: 50%;
+      z-index: 0;
+    }
   }
 }

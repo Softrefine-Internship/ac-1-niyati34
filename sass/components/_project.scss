@@ -58,16 +58,16 @@
 .section-date {
   color: $color-dark;
   font-size: 1.4rem;
-  margin-bottom: $sp-sm;
   display: inline-block;
 }
 
 /* Project Stats */
 .project-stats {
-  display: flex;
   gap: 2rem;
   align-items: center;
   margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 
   .stat-item {
     display: flex;

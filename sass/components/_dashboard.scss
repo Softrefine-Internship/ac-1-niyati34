@@ -20,10 +20,23 @@
   flex-direction: column;
   overflow: hidden;
 }
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
 
 .dashboard-content {
-  display: flex;
   flex: 1;
+  display: flex;
+  overflow: hidden;
+  padding: 0;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
 }
 
@@ -32,15 +45,11 @@
   flex: 1;
   overflow-y: auto;
   overflow-x: hidden;
-  padding-right: 1rem;
-  padding-left: 1rem;
-  padding-bottom: 2rem;
+  padding: 0 1rem 2rem;
   height: 100%;
-}
-.projects-section,
-.messages-section {
   scroll-behavior: smooth;
   scrollbar-width: none;
+
   &::-webkit-scrollbar {
     width: 6px;
   }
